@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/2022_katalk_clone/static/css/main.e7e6165b.css",
+    "main.js": "/2022_katalk_clone/static/js/main.551a5fea.js",
+    "static/media/kakaofriends.png": "/2022_katalk_clone/static/media/kakaofriends.84375bb9f89d79ccd760.png",
+    "static/media/path.png": "/2022_katalk_clone/static/media/path.7d00edf73f07bdcecc6d.png",
+    "static/media/kakaostory.png": "/2022_katalk_clone/static/media/kakaostory.572f3ce5bf10fbdaac9d.png",
+    "static/media/bg_default.png": "/2022_katalk_clone/static/media/bg_default.82687b4e75ad8b89fa96.png",
+    "index.html": "/2022_katalk_clone/index.html",
+    "main.e7e6165b.css.map": "/2022_katalk_clone/static/css/main.e7e6165b.css.map",
+    "main.551a5fea.js.map": "/2022_katalk_clone/static/js/main.551a5fea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7e6165b.css",
+    "static/js/main.551a5fea.js"
+  ]
+}
