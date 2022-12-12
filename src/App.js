@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState,useEffect } from "react";
+import AppRouter from "./Router";
+import { authService } from './firebase';
+import { onAuthStateChanged } from "firebase/auth";
+import './styles/common.scss';
+import { FaCommentDots } from "react-icons/fa";
+
 
 function App() {
+  const [init, setInit] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userObj, setUserObj] = useState(null);//로그인한 사용자 정보
+
+  useEffect(() => {
+    onAuthStateChanged(authService, (user) => {
+     // console.log(user);
+      if (user) {
+        //User is signed in
+        setIsLoggedIn(user);
+        setUserObj(user); 
+        //const uid = user.uid;
+
+      } else {
+        //User is signed out
+        setIsLoggedIn(false);
+      }
+      setInit(true);
+    });   
+  }, [])
+  //console.log(authService.currentUser);
+  // currentUser : 현재 로그인한 사람의 정보를 알수있음.
+  // null도 false.
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {init ? 
+        (<AppRouter isLoggedIn={isLoggedIn} userObj={userObj} />) 
+        :
+        (<div className="Loading">
+          <span className="load_icon"><FaCommentDots/></span>
+          <span className="load_text">KAKAO TALK</span>
+        </div>)
+      }  
+    </>
   );
 }
 

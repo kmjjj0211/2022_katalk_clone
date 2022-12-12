@@ -1,0 +1,54 @@
+// Freids.scss
+.load{
+    text-align:  center;
+    margin-top: 30%;
+    font-size: 20px;
+}
+main{
+    height: 85.8%;
+    padding-top: 64px;
+    .main_section{
+        header{
+            height: 32px;
+            line-height: 32px;
+            padding-left: 15px;
+            border: 1px solid #ebebeb;
+            border-left: none;
+            border-right: none;
+            color: #b6b5b1;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                border-bottom: 1px solid #ebebeb;
+                a{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 16px;
+                }
+                .profile_img{
+                    img{
+                        width: 40px; height: 40px;
+                        border-radius: 50%; 
+                    }  
+                }
+                .profile_name{
+                    flex: auto;
+                }
+                .profile_messages{
+                    height: 30px;
+                    line-height: 30px;
+                    margin-right: 15px;
+                    padding: 0 10px;
+                    border-radius: 5px;
+                    background: #f0f0f0;
+                    font-size: 10px;
+                    color: #8e9399;
+                }
+            }
+        }
+
+    }
+}
